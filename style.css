@@ -1,0 +1,581 @@
+#version{
+
+    width: 35vh;
+    height: 6vh;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background-color:white;
+  margin: 0;
+  padding: 0;
+}
+#dropdown{
+    font-size: 13px;
+    font-weight: 650;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#dropdown:hover{
+    padding-left: 7vh;
+    transition: all 0.3s ease 0s;    background-color: white;
+
+}
+#home{
+    width: 38vh;
+}
+#main{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+
+#menu{
+    padding-right: 19vh;
+    padding-bottom: 6vh;
+}
+ #hotel-img{
+    margin-left: -2vh;
+ }
+#hr{
+    visibility: hidden;
+}
+#button{
+    width: 26vh;
+    height: 8vh;
+    border-radius: 4px;
+    border-color: #cd2c22 ;
+    background-color:#cd2c22; ;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+}
+#profile{
+    margin: 4px;
+}
+#inr{
+    background-color: rgb(247, 243, 243);
+    border-color:rgb(247, 243, 243) ;
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+    width: 8vh;
+    margin-right: 2vh;
+
+}
+#inr:hover{color: orangered;}
+#flag{
+    background-color: rgb(247, 243, 243);
+    border-color:rgb(247, 243, 243) ;
+    color: black;
+    width: 8vh;
+    margin-right: 2vh;
+
+}
+.mountain{
+    background-size: cover;
+    min-height: 110vh;
+position: relative;
+}
+.centered-container {
+    position: relative;
+    text-align: center; 
+}
+
+.centered-heading,
+.centered-paragraph {
+    color: #36454F; 
+}
+
+.centered-heading {
+    margin-top: 30vh;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+}
+
+.centered-paragraph {
+    width: 80%;
+    margin: 20px auto 0; 
+    color: black;
+    font-size: 1.18rem;
+    font-weight: 500;
+
+
+}
+#select{
+    padding-bottom: 20vh;
+}
+
+
+.custom-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding: 15px;
+    height: 100px; 
+  }
+
+  .custom-card img {
+    width: 75px; 
+    height: 100%; 
+    border-radius: 5px;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .custom-card h4 {
+    color: #1f2d3d; 
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .custom-card p {
+    color: #888; 
+    font-size: 13px;
+  }
+  #heading{
+    color: #1f2d3d; 
+    margin-bottom: 5px;
+    font-weight: 800;
+    font-size: 15px;
+    margin-left: 16vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  }
+    /* Container for the row */
+    .row-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    
+    .row-container p {
+        font-weight: 700;
+        color: #001F3F; 
+        margin: 0; 
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 18px;
+    }
+
+    
+    .row-container button {
+        background-color: #FFD3D3; 
+        color: #cd2c22; 
+        font-weight: 700;
+        font-size: 14px;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 6px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    
+    .row-container button:hover {
+        background-color:#cd2c22; 
+        color: #FFFFFF;
+    }
+
+    
+    .arrow-icon {
+        color: #cd2c22; 
+        margin-left: 5px;
+    }
+
+    
+    @media (max-width: 600px) {
+        .row-container {
+            flex-direction: row;
+            text-align: center;
+        }
+
+        .arrow-icon {
+            margin-left: 0;
+            margin-top: 5px;
+        }
+    }
+
+
+    .card-container {
+        display: flex;
+        justify-content:  space-around;
+        padding: 20px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        background-color: white;
+      }
+      
+      .card {
+        width: calc(20% - 20px); 
+        margin-bottom: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px 10px 0 0;
+        transition: transform 0.3s ease-in-out;
+      }
+            
+      .card:hover img {
+        transform: scale(1.1);
+      }      
+      .card-content {
+        padding: 15px;
+      }
+      
+      
+      .arrow-icon {
+        color: darkblue;
+        width: 30px;
+        height: 40px;
+      }
+      
+      
+      .price-info {
+        color: #888;
+        font-size: 13px;
+        justify-content: flex-start;
+      }
+      
+      .price {
+        color: #1E2A38;
+        font-size: 16px;
+      }
+      #text{
+        color: #1E2A38;
+        font-size: 18px;
+        margin: 0;
+        font-weight: 700;
+        word-wrap: nowrap;
+
+      }
+      .trip-info{
+color: grey;
+font-size: 13px;
+
+      }
+      
+      @media (max-width: 768px) {
+        .card {
+          width: 50%;
+          padding: 20px;
+          gap: 2;
+          font-size: 27px;
+        }}
+        @media (max-width: 1100px) {
+          .card {
+            width: 70%;
+            padding: 20px;
+            gap: 2;
+            font-size: 27px;
+
+          }}
+          .your-container-class {
+            margin: 0;
+            padding: 20px; 
+            text-align: center; 
+          }
+          
+          .your-flex-container {
+            display: flex;
+            flex-wrap: wrap;  
+            justify-content: space-around;}
+          
+          .your-custom-card-class {
+            position: relative;  
+            flex: 0 0 calc(20% - 20px); 
+            max-width: calc(20% - 20px); 
+            margin: 20px; 
+            overflow: hidden; 
+            border-radius: 10px;
+          }
+          
+          .your-custom-card-class img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+            border-radius: 10px;
+          }
+          
+          .your-custom-card-class h6 {
+            position: absolute; 
+            bottom: 10px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            font-size: 25px; 
+            font-weight: 700;
+            color: white;
+            transition: bottom 0.3s ease-in-out;
+          }
+          
+          .your-custom-card-class:hover h6 {
+            top: 200px; 
+          }
+          
+          .your-button {
+            position: absolute;
+            bottom: -50px;
+            left: 49%;
+            transform: translateX(-50%);
+            background-color:white;
+            color: #1f2d3d;
+            font-weight: 700;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: bottom 0.3s ease-in-out;
+            width: 170px;
+            height: 50px;
+          }
+          .your-button:hover{
+            background-color: #cd2c22;
+            border-color: #cd2c22;
+            color: white;
+  
+          }
+          
+          .your-custom-card-class:hover .your-button {
+            bottom: 10px;
+          }
+          @media (max-width: 768px) {
+            .your-flex-container {
+              flex-direction: column;
+              justify-content: center;
+              padding: 20px;
+              margin: auto;
+              align-items: center; 
+            }
+          
+            .your-custom-card-class {
+              flex: 0 0 calc(120% - 20px);
+              max-width: calc(120% - 20px);
+            }
+          }
+          @media (max-width: 576px) {
+            .your-flex-container {
+              flex-direction: column;
+              align-items: center; 
+            }
+          
+            .your-custom-card-class {
+              flex: 0 0 calc(80% - 20px);
+              max-width: calc(80% - 20px);
+            }
+          
+            .your-custom-card-class img {
+              object-fit: contain; 
+            }
+          }
+                    @media (min-width: 769px) and (max-width: 992px) {
+            .your-custom-card-class {
+              flex: 0 0 calc(25% - 20px);
+              max-width: calc(25% - 20px);
+            }
+            .your-custom-card-class img {
+              object-fit: contain;
+            }
+
+          }
+          
+          
+          @media (min-width: 993px) and (max-width: 1200px) {
+            
+          }
+          
+          
+          @media (min-width: 1201px) {
+            
+          }
+          .your-mini-buttons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            display: none; 
+            text-align: center;
+          }
+          
+          .your-mini-buttons button {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid  rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin: 5px;
+            margin-top: 5px;
+            width: 55px;
+            height: 35px;
+            font-size: 10px;
+          }
+          
+          .your-custom-card-class:hover .your-mini-buttons {
+            display: block; 
+          }
+
+          .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .banner {
+            background-color:#e6f7ff; 
+            color: #fff;
+            text-align: left;
+            padding: 20px;
+            height: 300px;
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #001F3F;
+            font-weight: 700;
+        }
+        
+        p {
+            color: #666; 
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .form-row {
+          align-items: center;
+          border: 1px solid white;
+          border-radius: 5px;
+          width: 500px;
+          margin-top: 60px;
+      }
+        
+        input {
+          flex: 1;
+          padding: 8px;
+          margin-right: 10px;
+          border: 1px solid grey;
+          border-radius: 5px;
+          width: 300px;
+      }
+      
+      button {
+          background-color: #cd2c22; 
+          color: #fff;
+          padding: 10px 20px;
+          border: 1px solid #cd2c22;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          height: 50px;
+      }
+      
+      button:hover {
+          background-color: #cd2c22; 
+      }
+      .my-button {
+        display: inline-block;
+        padding: 10px 20px; 
+        color: white;
+        text-align: right;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px; 
+      }
+  
+
+      footer {
+        background-color:#e5ffd0;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .footer-column {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .footer-column h4 {
+        color: #1E2A38;
+        font-weight: 700;
+    }
+
+    .footer-row {
+        margin-bottom: 8px;
+        color: grey;
+        font-size: 13px;
+        margin: 15px;
+        
+
+    }
+    .social-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .social-icon {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+
+
+    .NEW-banner {
+      display: flex;
+   
+      align-items: center;
+      background-color: white;
+      padding: 10px;
+  }
+
+  /* Style for the buttons */
+  .NEW-button {
+      background-color: #1E2A38;
+      color: white;
+      margin: 6px;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      width: 220px;
+      height: 50px;
+      font-size: 13px;
+  }
+
+  
+  .NEW-grid-container {
+    display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 30px;
+      padding-bottom: 30px;
+      font-size: 13px;
+      color: grey;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  .NEW-grid-item {
+      background-color: black; 
+      padding: 10px;
+      text-align: center;
+  }
+
